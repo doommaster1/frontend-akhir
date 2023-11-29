@@ -1,0 +1,515 @@
+/* [http://meyerweb.com/eric/tools/css/reset/](http://meyerweb.com/eric/tools/css/reset/)
+v2.0 | 20110126
+License: none (public domain)
+*/
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    position: absolute;
+    width: 98%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    padding: 15px 0 15px 15px;
+    font-family: 'Raleway', sans-serif;
+}
+
+header ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    padding: 0 25px;
+}
+
+
+.logo-dpm img{
+    width: 100px;
+}
+
+
+.header .nav-menu{
+    padding: 0 25px;
+}
+
+.header-main{
+    background-color: #a01626;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 50px;
+}
+
+.header .menu > .menu-item{
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+}
+
+.header .menu > .menu-item > a{
+    display: block;
+    padding: 15px 0;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
+.header .open-nav-menu{
+    height: 34px;
+    width: 40px;
+    margin-right: 15px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+.header .open-nav-menu span{
+    position: relative;
+    display: block;
+    height: 3px;
+    width: 24px;
+    background-color: #fff;
+}
+
+.header .open-nav-menu span:before,
+.header .open-nav-menu span:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.header .open-nav-menu span:before{
+    top: -7px;
+}
+
+.header .open-nav-menu span:after{
+    top: 7px;
+}
+
+.header .close-nav-menu{
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    margin: 0 0 15px 15px;
+    color: #000;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .close-nav-menu i{
+    font-size: 30px;
+    color: #000;
+    /* width: 16px; */
+}
+
+
+.background{
+    margin-top: 150px;
+    background-image: url(img/train.jpg);
+    background-position: center;
+    min-height: 470px;
+    background-size: cover;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    background-color: #081b29;
+    margin-top: 200px;
+}
+
+.gallery .hobby {
+    padding: 40px;
+    display: flex;
+    font-size: 35px;
+    font-weight: bolder;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.gallery .content {
+    padding: 25px;
+    gap: 10px;
+    display: grid;
+    grid-template-areas: 'gambar-1 gambar-1 gambar-2 gambar-3' 
+    'gambar-1 gambar-1 gambar-4 gambar-5';
+}
+
+.content .gambar {
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #fff;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+.content .title-box{
+    content: "";
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0), #000);
+    z-index: 1;
+    transform: translateY(50px);
+    transition: 0.5s ease-in-out;
+}
+
+.content .gambar:hover .title,
+.content .gambar:hover .title-box{
+    transform: translateY(0);
+}
+
+.content .title{
+    position: absolute;
+    width: 100%;
+    color: white;
+    z-index: 2;
+    bottom: 10px;
+    padding: 10px;
+    transform: translateY(50px);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.content .gambar:hover {
+    transition: 0.4s ease-in-out;
+}
+
+.content{
+    background-size: cover;
+    background-position: center;
+}   
+
+.content .satu {
+    background-image: url("img/destination.jpg");
+    min-height: 550px;
+    grid-area: gambar-1;
+}
+
+.content .dua {
+    background-image: url("img/route.jpg");
+    grid-area: gambar-2;
+}
+
+.content .tiga {
+    background-image: url("img/station.jpg");
+    grid-area: gambar-3;
+}
+
+.content .empat {
+    background-image: url("img/kemitraan.jpg");
+    grid-area: gambar-4;
+}
+
+.content .lima {
+    background-image: url("img/interior.jpg");
+    grid-area: gambar-5;
+}
+
+/* footer */
+footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #a01626;
+    color: white;
+    justify-items: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+
+footer .one, 
+footer .two, 
+footer .three{
+    padding: 20px;
+}
+
+footer .one img{
+    width: 250px;
+    padding-bottom: 10px;
+}
+
+footer ul li{
+    font-weight: 300;
+}
+
+footer p{
+    line-height: 25px;
+    font-weight: 300;
+}
+
+footer h1{
+    font-size: large;
+    padding-bottom: 7px;
+    font-weight: bolder;
+    /* font-weight: bolder; */
+}
+
+footer .two{
+    text-align: center;
+}
+
+footer .two .developer ul li{
+    margin-bottom: 7px;
+}
+
+footer .two .social-media ul li{
+    display: inline;
+    /* padding-right: 10px; */
+}
+
+footer .two .social-media ul li a{
+    display: inline;
+    color: white;
+    padding-right: 10px;
+}
+
+footer .two .developer{
+    margin-bottom: 20px;
+}
+
+footer .three{
+    text-align: end;
+}
+
+/* responsive */
+@media(max-width: 991px){
+    .header .nav-menu{
+        position: fixed;
+        right: -280px;
+        visibility: hidden;
+        height: 100%;
+        overflow-y: auto;
+        width: 280px;
+        top: 0;
+        background-color: #222;
+        z-index: 1000;
+        padding: 15px 0;
+        transition: all .5s ease;
+    }
+
+    .header .logo{
+        width: 60%;
+    }
+
+    .header .nav-menu.open{
+        visibility: visible;
+        right: 0px;
+    }
+
+
+    .header .menu > .menu-item{
+        display: block;
+        margin: 0;
+    }
+
+
+    .header .menu > .menu-item a{
+        color: #fff;
+        padding: 12px 15px;
+        border-bottom: 1px solid #333;
+    }
+
+    .header .menu > .menu-item:first-child > a{
+        border-top: 1px solid #333;
+    }
+   
+    .header .close-nav-menu,
+    .header .open-nav-menu{
+        display: flex;
+    }
+}
+
+@media(max-width: 768px){
+    .home-section::before{
+        background-image: url(navImg/bg1.JPG);
+    }
+
+    .gallery .hobby {
+        padding: 20px;
+        font-size: 25px;
+        background-color: #df0347;
+    }
+
+    .gallery .content {
+        margin: 20px;
+        grid-template-areas: 'gambar-1 gambar-1' 'gambar-2 gambar-3' 'gambar-4 gambar-5';
+    }
+
+    .content .satu {
+        min-height: 250px;
+    }
+
+    .dua,
+    .lima,
+    .tiga .empat {
+        min-height: 150px;
+    }
+
+    /* footer */
+    footer{
+        grid-template-columns: 1fr;
+    }
+
+    footer .one img{
+        padding-bottom: 0px;
+    }
+
+    footer .three{
+        text-align: center;
+    }
+
+}
+
+
