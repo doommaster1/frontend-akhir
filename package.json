@@ -1,0 +1,19 @@
+{
+  "name": "project_backend_i",
+  "version": "1.0.0",
+  "description": "merubah project ke ejs",
+  "main": "ejs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ejs.js"
+  },
+  "author": "Stefanus",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
